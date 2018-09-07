@@ -1,4 +1,5 @@
 # erai_tnflux
+Scripts I use for calculating the Takaya-Nakamura wave activity flux with ERAI data.
 
 General steps.
 1. Download 6 hourly nc data for u, v, t, z.
@@ -11,3 +12,5 @@ note: 16 Oct 2017 Did until step 4, because only to do on monthly data.
 6. Create the daily px, py, pz, div, psiaa files with calc_tnflux.gs, use RUN_GRADS.sh to submit to batch.
 7. Use cdo_mergeday.py to merge the files from step 6 to erai_tnflux_day_????.nc.
 8. Use cdo_monmean2.py to create erain_tnflux_mon_????.nc, then cdo mergetime to merge the resulting files to erai_tnflux_mon_1979_2015.nc
+
+The scripts with "monthlydata" are applied to (obviously) monthly data, the others are to daily data.
